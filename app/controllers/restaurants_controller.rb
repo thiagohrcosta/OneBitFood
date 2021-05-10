@@ -5,6 +5,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
     filter_by_query if params[:q]
     filter_by_city if params[:city]
+    filter_by_category if params[:category]
   end
 
   def show
@@ -20,7 +21,13 @@ class RestaurantsController < ApplicationController
     @restaurant = @restaurants.ransack(name_or_description_cont: params[:q]).result
   end
 
-  def filber_by_city
+  def filter_by_city
     @restaurant = @restaurants.where(city: params[:city]) 
+  end
+
+  def filter_by_category
+    @restaurant = @restaurants.select do |r|
+      r.category.title == params[:category]
+    end
   end
 end
