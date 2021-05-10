@@ -21,7 +21,6 @@ path_image = 'public/images/categories/vegan.jpeg'
 c = Category.create(id: 4, title: 'vegana')
 c.image.attach(io: File.open(path_image), filename: 'vegan.jpeg')
 ​
-​
 path_image = 'public/images/categories/peruvian.jpg'
 c = Category.create(id: 5, title: 'peruana')
 c.image.attach(io: File.open(path_image), filename: 'peruana.jpg')
