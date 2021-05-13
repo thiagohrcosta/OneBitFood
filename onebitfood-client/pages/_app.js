@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
     <Head>
       <title>One BitFood V2</title>
-
+      <link ref="icon" href="/favicon.icon" />
     </Head>
     <main>
        <Component {...pageProps} />
