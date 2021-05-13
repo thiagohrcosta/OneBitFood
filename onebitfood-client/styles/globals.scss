@@ -21,3 +21,7 @@ $spacers: (
  8: ($spacer * 15),
  9: ($spacer * 20)
 );
+
+$font-weight-bold: 600;
+
+@import '~bootstrap/scss/bootstrap';
