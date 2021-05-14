@@ -9,3 +9,6 @@ Project developed during the OneBitCode week (Ruby on Rails)![enter image descri
 
 ## Database
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1620677116/dbOneBitFood_ii3gmn.png)
+
+TESTE.
+FIX.
