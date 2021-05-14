@@ -1,8 +1,8 @@
 module.exports = {
     images: {
-        domains: ['localhost']
+      domains: ["localhost"],
     },
     env: {
-        apiUrl: 'http://localhost:3000'
-    }
-}
+      apiUrl: "http://localhost:3000",
+    },
+  };

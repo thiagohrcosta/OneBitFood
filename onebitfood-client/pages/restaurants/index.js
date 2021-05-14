@@ -1,6 +1,6 @@
 import ListRestaurants from '../../components/ListRestaurants';
 
-export default function restaurants() {
+export default function Restaurants() {
     return (
         <>
             <ListRestaurants />
