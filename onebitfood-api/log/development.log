@@ -5507,3 +5507,32 @@ Did you mean?  restaurant
 app/views/restaurants/_restaurant.json.jbuilder:11
 app/views/restaurants/index.json.jbuilder:2
 app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:45:50 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 17.1ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 19.7ms | Allocations: 4802)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96d4a4e08>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
