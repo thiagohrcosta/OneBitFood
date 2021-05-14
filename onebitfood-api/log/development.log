@@ -5182,3 +5182,328 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 2642)
 
 
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:12:41 -0300
+  [1m[35m (22.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:12:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as JSON
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (9.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 405.1ms | Allocations: 23123)
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 315.5ms | Allocations: 22819)
+  Rendered restaurants/index.json.jbuilder (Duration: 464.2ms | Allocations: 34307)
+  Rendered restaurants/index.json.jbuilder (Duration: 480.5ms | Allocations: 34589)
+Completed 500 Internal Server Error in 686ms (ActiveRecord: 12.3ms | Allocations: 39601)
+
+
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 1.8ms | Allocations: 39706)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa9700dea28>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa9700b31c0>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:12:48 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 19.5ms | Allocations: 4006)
+  Rendered restaurants/index.json.jbuilder (Duration: 23.1ms | Allocations: 4815)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 5041)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa9700b3d28>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:16:47 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 30.5ms | Allocations: 4006)
+  Rendered restaurants/index.json.jbuilder (Duration: 32.9ms | Allocations: 4818)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms | Allocations: 5043)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96d49ee90>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:19:23 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 21.2ms | Allocations: 4006)
+  Rendered restaurants/index.json.jbuilder (Duration: 24.4ms | Allocations: 4815)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms | Allocations: 5040)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96c6e5470>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:19:36 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 23.9ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 26.9ms | Allocations: 4802)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96c350fd0>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:19:41 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 20.2ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 23.4ms | Allocations: 4802)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x0055f707862d98>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:20:28 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 15.4ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 18.1ms | Allocations: 4802)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x0055f706d8f470>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:22:18 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 15.7ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 27.6ms | Allocations: 4802)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.8ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96d5ffbe0>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:41:24 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 27.5ms | Allocations: 4040)
+  Rendered restaurants/index.json.jbuilder (Duration: 32.7ms | Allocations: 5418)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.9ms | Allocations: 5632)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa96d5dd748>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
+Started GET "/api/restaurants" for ::1 at 2021-05-14 18:42:19 -0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.json.jbuilder:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/restaurants/_restaurant.json.jbuilder:10
+  Rendered restaurants/_restaurant.json.jbuilder (Duration: 30.4ms | Allocations: 4003)
+  Rendered restaurants/index.json.jbuilder (Duration: 32.8ms | Allocations: 4802)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms | Allocations: 5018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `restaruant' for #<ActionView::Base:0x007fa970072468>
+Did you mean?  restaurant
+               @restaurants):
+     8: json.number restaurant.number
+     9: json.complement restaurant.complement
+    10: json.image_url polymorphic_url(restaurant.image) if restaurant.image.attached?
+    11: json.category_title restaruant.category.title
+    12: 
+    13: json.product_categories restaurant.product_categories do |product_category|
+    14:   json.partial! 'product_categories/product_category', product_category: product_category
+  
+app/views/restaurants/_restaurant.json.jbuilder:11
+app/views/restaurants/index.json.jbuilder:2
+app/views/restaurants/index.json.jbuilder:1
