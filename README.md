@@ -78,3 +78,10 @@ Thiso project was building using the **backend as API**, because of that after d
      - Restaurant details added;
      - Category Products added;
      - Recoil implementation added;
+
+**May 15**
+
+     - Bug fixed on backend(API);
+     - Cities modal added;
+     - getAvailable cities added;
+     - Modal added to force user to choose a city
