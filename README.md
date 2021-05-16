@@ -49,3 +49,11 @@ Thiso project was building using the **backend as API**, because of that after d
    - ** DAY ONE FINISHED **  -
 
 **May 12**
+
+   - Bug fixed on CORS;
+   - Folder Refactored to allow backend and frontend in the same project;
+   - Project with NextJS created;
+   - SWR added;
+   - React-icons, favicon added;
+   - Variables added to manage colors on CSS;
+   - Bootstrap imported;
