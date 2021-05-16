@@ -1,3 +1,4 @@
+
 # OneBitFood
 Project developed during the OneBitCode week (Ruby on Rails).
 ![mainGif](https://res.cloudinary.com/dloadb2bx/image/upload/v1621122897/Peek_15-05-2021_20-53_ljblcj.gif)
@@ -11,5 +12,40 @@ Project developed during the OneBitCode week (Ruby on Rails).
 ## Database
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1620677116/dbOneBitFood_ii3gmn.png)
 
-TESTE.
-FIX.
+## How to run this project?
+Thiso project was building using the **backend as API**, because of that after download, you need to open the `onebitfood-api`and run `rails s` to start the backend API. After that, go to `onebitfood-client` and run `yarn dev` to start or front-end in React that will get the data from the API
+
+ - The backend will be running on `localhost:3000`
+ - The frontend will be running on `localhost:3001`
+
+## Development routine
+
+**May 10**
+
+   - Project created in Rails;
+   - Ransack and rack-cors gems added;
+   - Model Category created;
+   - Model Restaurant created;
+   - Model ProductCategory created;
+   - Model Product created;
+   - Model order created;
+   - Default status to order added;
+   - Migration runned;
+   - Relashionship between models finished;
+   - Validations added to models;
+   - Controller Categories created;
+   - Controller Restaurants created;
+   - Controller Orders created;
+   - Controller AvailableCities created;
+   - Active Storage added;
+   - Seeds added;
+   - Added image to seed;
+   - Fix bugs on API's endpoint
+   - Filter with ransack gem added;
+   - Filter by city and category added;
+   - Action created on Order Controller;
+   - Migration added to insert street to Order;
+   - CORS used;
+   - ** DAY ONE FINISHED **  -
+
+**May 12**
