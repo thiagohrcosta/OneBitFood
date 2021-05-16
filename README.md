@@ -22,38 +22,59 @@ Thiso project was building using the **backend as API**, because of that after d
 
 **May 10**
 
-   - Project created in Rails;
-   - Ransack and rack-cors gems added;
-   - Model Category created;
-   - Model Restaurant created;
-   - Model ProductCategory created;
-   - Model Product created;
-   - Model order created;
-   - Default status to order added;
-   - Migration runned;
-   - Relashionship between models finished;
-   - Validations added to models;
-   - Controller Categories created;
-   - Controller Restaurants created;
-   - Controller Orders created;
-   - Controller AvailableCities created;
-   - Active Storage added;
-   - Seeds added;
-   - Added image to seed;
-   - Fix bugs on API's endpoint
-   - Filter with ransack gem added;
-   - Filter by city and category added;
-   - Action created on Order Controller;
-   - Migration added to insert street to Order;
-   - CORS used;
-   - ** DAY ONE FINISHED **  -
+    - Project created in Rails;
+    - Ransack and rack-cors gems added;
+     - Model Category created;
+     - Model Restaurant created;
+     - Model ProductCategory created;
+     - Model Product created;
+     - Model order created;
+     - Default status to order added;
+     - Migration runned;
+     - Relashionship between models finished;
+     - Validations added to models;
+     - Controller Categories created;
+     - Controller Restaurants created;
+     - Controller Orders created;
+     - Controller AvailableCities created;
+     - Active Storage added;
+     - Seeds added;
+     - Added image to seed;
+     - Fix bugs on API's endpoint
+     - Filter with ransack gem added;
+     - Filter by city and category added;
+     - Action created on Order Controller;
+     - Migration added to insert street to Order;
+     - CORS used;
+     - ** DAY ONE FINISHED **  -
 
 **May 12**
 
-   - Bug fixed on CORS;
-   - Folder Refactored to allow backend and frontend in the same project;
-   - Project with NextJS created;
-   - SWR added;
-   - React-icons, favicon added;
-   - Variables added to manage colors on CSS;
-   - Bootstrap imported;
+     - Bug fixed on CORS;
+     - Folder Refactored to allow backend and frontend in the same project;
+     - Project with NextJS created;
+     - SWR added;
+     - React-icons, favicon added;
+     - Variables added to manage colors on CSS;
+     - Bootstrap imported;
+
+**May 13**
+
+     - @media added to perform responsive layout;
+     - Header and Logo added;
+     - Main page CSS and Logo CSS added;
+
+**May 14**
+
+     - Index page updated;
+     - Typeriter component created;
+     - useState and useEffect added;
+     - Service folder with toCurrency and truncateString created;
+     - Category title to OneBitFood API added;
+     - getRestaurant on services added with SWR;
+     - React Slick added;
+     - getCategories added;
+     - Search bar added;
+     - Restaurant details added;
+     - Category Products added;
+     - Recoil implementation added;
